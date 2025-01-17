@@ -1,95 +1,94 @@
-/* Centrare e ingrandire il contenuto */
+/* Stili principali per la pagina */
 .contentIframeClass {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	transform-origin: center center;
-	border: none;
-	overflow: hidden; /* Rimuove barre di scorrimento */
+    width: 100%; /* Adatta alla larghezza dello schermo */
+    height: 100%; /* Adatta all'altezza dello schermo */
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra orizzontalmente */
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    border: none;
+    overflow: hidden; /* Rimuove barre di scorrimento */
 }
 
 /* Nasconde la dummy IFrame */
 .dummyIFrameClass {
-	display: none;
+    display: none;
 }
 
 /* Stile per i pulsanti di navigazione */
 .prev, .next {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	padding: 10px;
-	color: rgb(0, 0, 0);
-	font-weight: bold;
-	font-size: 20px;
-	visibility: visible;
-	transform: translateY(-50%);
-	z-index: 100;
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px; /* Dimensione standard */
+    visibility: visible;
+    transform: translateY(-50%);
+    z-index: 100; /* Sopra il contenuto */
 }
 
 /* Posizione dei pulsanti */
 .prev {
-	left: 5%;
-	border-radius: 0 3px 3px 0;
+    left: 5%; /* Posiziona a sinistra */
+    border-radius: 0 3px 3px 0;
 }
 
 .next {
-	right: 5%;
-	border-radius: 3px 0 0 3px;
+    right: 5%; /* Posiziona a destra */
+    border-radius: 3px 0 0 3px;
 }
 
 /* Stile generale della pagina */
 html, body {
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Rimuove eventuali barre di scorrimento della finestra */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Colore di sfondo */
 }
 
 /* Nasconde le scrollbar all'interno degli iframe */
 iframe {
-	scrollbar-width: none;
-	-ms-overflow-style: none;
+    scrollbar-width: none; /* Nasconde per browser moderni */
+    -ms-overflow-style: none; /* Nasconde per IE/Edge */
 }
 
 iframe::-webkit-scrollbar {
-	display: none;
+    display: none; /* Nasconde per browser basati su WebKit */
 }
 
 /* Media query per schermi piccoli */
 @media (max-width: 768px) {
-	.contentIframeClass {
-		width: 100%;
-		height: auto;
-	}
+    .contentIframeClass {
+        width: 100%;
+        height: auto; /* Adatta automaticamente l'altezza */
+    }
 
-	.prev, .next {
-		font-size: 15px;
-		padding: 5px;
-	}
-
-	html, body {
-		flex-direction: column;
-	}
+    .prev, .next {
+        font-size: 15px; /* Riduce la dimensione */
+        padding: 5px;
+    }
 }
 
 /* Media query per schermi molto piccoli */
 @media (max-width: 480px) {
-	.contentIframeClass {
-		width: 100%;
-		height: auto;
-	}
+    .contentIframeClass {
+        width: 100%;
+        height: auto;
+    }
 
-	.prev, .next {
-		font-size: 12px;
-		padding: 5px;
+    .prev, .next {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
 	}
 }
