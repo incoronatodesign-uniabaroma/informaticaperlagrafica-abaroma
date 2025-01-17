@@ -1,0 +1,65 @@
+/* Centrare e ingrandire il contenuto */
+.contentIframeClass {
+	width: 1024px; /* Larghezza standard per visualizzazione */
+	height: 768px; /* Altezza standard */
+	position: absolute;
+	top: 50%; /* Centra verticalmente */
+	left: 50%; /* Centra orizzontalmente */
+	transform: translate(-50%, -50%) scale(1.2); /* Ingrandisce del 20% */
+	transform-origin: center center;
+	border: none; /* Rimuove il bordo */
+	overflow: hidden; /* Rimuove barre di scorrimento */
+}
+
+/* Nasconde la dummy IFrame */
+.dummyIFrameClass {
+	display: none;
+}
+
+/* Stile per i pulsanti di navigazione */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%; /* Centra verticalmente */
+	padding: 15px;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	font-size: 30px;
+	visibility: visible; /* Sempre visibili */
+	transform: translateY(-50%);
+	z-index: 100; /* Sopra il contenuto */
+}
+
+/* Posizione dei pulsanti */
+.prev {
+	left: 20px; /* Posiziona a sinistra */
+	border-radius: 0 3px 3px 0;
+}
+
+.next {
+	right: 20px; /* Posiziona a destra */
+	border-radius: 3px 0 0 3px;
+}
+
+/* Stile generale della pagina */
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden; /* Rimuove eventuali barre di scorrimento della finestra */
+	width: 100vw; /* Adatta alla larghezza della finestra */
+	height: 100vh; /* Adatta all'altezza della finestra */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffffff; /* Sfondo bianco */
+}
+
+/* Nasconde le scrollbar all'interno degli iframe */
+iframe {
+	scrollbar-width: none; /* Nasconde per browser moderni */
+	-ms-overflow-style: none; /* Nasconde per IE/Edge */
+}
+
+iframe::-webkit-scrollbar {
+	display: none; /* Nasconde per browser basati su WebKit */
+}
