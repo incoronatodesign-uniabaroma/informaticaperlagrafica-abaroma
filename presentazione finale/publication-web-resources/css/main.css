@@ -1,10 +1,10 @@
 /* Centrare e ingrandire il contenuto */
 .contentIframeClass {
-	width: 100%; /* Adatta alla larghezza dello schermo */
-	height: 100%; /* Adatta all'altezza dello schermo */
+	width: 100%;
+	height: 100%;
 	position: absolute;
-	top: 50%; /* Centra verticalmente */
-	left: 50%; /* Centra orizzontalmente */
+	top: 50%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	transform-origin: center center;
 	border: none;
@@ -20,24 +20,24 @@
 .prev, .next {
 	cursor: pointer;
 	position: absolute;
-	top: 50%; /* Centra verticalmente */
+	top: 50%;
 	padding: 10px;
 	color: rgb(0, 0, 0);
 	font-weight: bold;
-	font-size: 20px; /* Dimensione ridotta per schermi piccoli */
+	font-size: 20px;
 	visibility: visible;
 	transform: translateY(-50%);
-	z-index: 100; /* Sopra il contenuto */
+	z-index: 100;
 }
 
 /* Posizione dei pulsanti */
 .prev {
-	left: 5%; /* Posiziona a sinistra */
+	left: 5%;
 	border-radius: 0 3px 3px 0;
 }
 
 .next {
-	right: 5%; /* Posiziona a destra */
+	right: 5%;
 	border-radius: 3px 0 0 3px;
 }
 
@@ -45,7 +45,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	overflow: hidden; /* Rimuove eventuali barre di scorrimento della finestra */
+	overflow: hidden;
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -68,16 +68,16 @@ iframe::-webkit-scrollbar {
 @media (max-width: 768px) {
 	.contentIframeClass {
 		width: 100%;
-		height: auto; /* Adatta automaticamente l'altezza */
+		height: auto;
 	}
 
 	.prev, .next {
-		font-size: 15px; /* Riduce ulteriormente la dimensione */
+		font-size: 15px;
 		padding: 5px;
 	}
 
 	html, body {
-		flex-direction: column; /* Disposizione verticale per piccoli schermi */
+		flex-direction: column;
 	}
 }
 
