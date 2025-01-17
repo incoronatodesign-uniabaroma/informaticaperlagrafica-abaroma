@@ -1,13 +1,13 @@
 /* Centrare e ingrandire il contenuto */
 .contentIframeClass {
-	width: 90vw; /* Usa il 90% della larghezza dello schermo */
-	height: 90vh; /* Usa il 90% dell'altezza dello schermo */
+	width: 100%; /* Adatta alla larghezza dello schermo */
+	height: 100%; /* Adatta all'altezza dello schermo */
 	position: absolute;
 	top: 50%; /* Centra verticalmente */
 	left: 50%; /* Centra orizzontalmente */
-	transform: translate(-50%, -50%) scale(1.1); /* Ingrandisce leggermente */
+	transform: translate(-50%, -50%);
 	transform-origin: center center;
-	border: none; /* Rimuove il bordo */
+	border: none;
 	overflow: hidden; /* Rimuove barre di scorrimento */
 }
 
@@ -21,11 +21,11 @@
 	cursor: pointer;
 	position: absolute;
 	top: 50%; /* Centra verticalmente */
-	padding: 10px; /* Riduce il padding per schermi piccoli */
+	padding: 10px;
 	color: rgb(0, 0, 0);
 	font-weight: bold;
-	font-size: 30px;
-	visibility: visible; /* Sempre visibili */
+	font-size: 20px; /* Dimensione ridotta per schermi piccoli */
+	visibility: visible;
 	transform: translateY(-50%);
 	z-index: 100; /* Sopra il contenuto */
 }
@@ -46,43 +46,50 @@ html, body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden; /* Rimuove eventuali barre di scorrimento della finestra */
-	width: 100vw; /* Adatta alla larghezza della finestra */
-	height: 100vh; /* Adatta all'altezza della finestra */
+	width: 100vw;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #ffffff; /* Sfondo bianco */
+	background-color: #ffffff;
 }
 
 /* Nasconde le scrollbar all'interno degli iframe */
 iframe {
-	scrollbar-width: none; /* Nasconde per browser moderni */
-	-ms-overflow-style: none; /* Nasconde per IE/Edge */
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 }
 
 iframe::-webkit-scrollbar {
-	display: none; /* Nasconde per browser basati su WebKit */
+	display: none;
 }
 
 /* Media query per schermi piccoli */
 @media (max-width: 768px) {
 	.contentIframeClass {
-		width: 100%; /* Adatta alla larghezza dello schermo */
-		height: 100%; /* Adatta all'altezza dello schermo */
-		transform: none; /* Nessun ingrandimento su schermi piccoli */
+		width: 100%;
+		height: auto; /* Adatta automaticamente l'altezza */
 	}
 
 	.prev, .next {
-		font-size: 20px; /* Riduce la dimensione del testo */
-		padding: 8px; /* Riduce il padding */
+		font-size: 15px; /* Riduce ulteriormente la dimensione */
+		padding: 5px;
+	}
+
+	html, body {
+		flex-direction: column; /* Disposizione verticale per piccoli schermi */
 	}
 }
 
-/* Media query per schermi molto grandi */
-@media (min-width: 1440px) {
+/* Media query per schermi molto piccoli */
+@media (max-width: 480px) {
 	.contentIframeClass {
-		width: 80vw; /* Usa una percentuale più piccola per schermi grandi */
-		height: 80vh;
-		transform: scale(1.3); /* Ingrandisce leggermente di più */
+		width: 100%;
+		height: auto;
+	}
+
+	.prev, .next {
+		font-size: 12px;
+		padding: 5px;
 	}
 }
