@@ -1,115 +1,27 @@
-<<<<<<< Updated upstream
-* Centrare e ingrandire il contenuto */.contentIframeClass {
-		width: 1024px;
-	/* Larghezza standard per visualizzazione */	height: 768px;
-	/* Altezza standard */	position: absolute;	top: 50%;
-	/* Centra verticalmente */	left: 50%;
-	/* Centra orizzontalmente */	transform: translate(-50%, -50%) scale(1.2);
-	/* Ingrandisce del 20% */	transform-origin: center center;	border: none;
-	/* Rimuove il bordo */	overflow: hidden;
-	/* Rimuove barre di scorrimento */}
-
-/* Nasconde la dummy IFrame */.dummyIFrameClass {
-		display: none;}
-
-/* Stile per i pulsanti di navigazione */.prev, .next {
-		cursor: pointer;	position: absolute;	top: 50%;
-	/* Centra verticalmente */	padding: 15px;	color: rgb(0, 0, 0);	font-weight: bold;	font-size: 30px;	visibility: visible;
-	/* Sempre visibili */	transform: translateY(-50%);	z-index: 100;
-	/* Sopra il contenuto */}
-
-/* Posizione dei pulsanti */.prev {
-		left: 20px;
-	/* Posiziona a sinistra */	border-radius: 0 3px 3px 0;}
-
-.next {
-		right: 20px;
-	/* Posiziona a destra */	border-radius: 3px 0 0 3px;}
-
-/* Stile generale della pagina */html, body {
-		margin: 0;	padding: 0;	overflow: hidden;
-	/* Rimuove eventuali barre di scorrimento della finestra */	width: 100vw;
-	/* Adatta alla larghezza della finestra */	height: 100vh;
-	/* Adatta all'altezza della finestra */	display: flex;	justify-content: center;	align-items: center;	background-color: #ffffff;
-	/* Sfondo bianco */}
-
-/* Nasconde le scrollbar all'interno degli iframe */iframe {
-		scrollbar-width: none;
-	/* Nasconde per browser moderni */	-ms-overflow-style: none;
-	/* Nasconde per IE/Edge */}
-
-iframe::-webkit-scrollbar {
-		display: none;
-	/* Nasconde per browser basati su WebKit */}
-=======
-/* Ottimizzazione della visualizzazione per tutti gli schermi */
-
-/* Stile per l'iframe del contenuto */
 .contentIframeClass {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: none;
-    overflow: hidden; /* Rimuove barre di scorrimento */
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border: none;
 }
-
-/* Nascondere l'iframe dummy */
 .dummyIFrameClass {
-    display: none;
+	display: none;
 }
-
-/* Stile per i pulsanti di navigazione */
 .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%; /* Centra verticalmente */
-    padding: 15px;
-    color: #000;
-    font-weight: bold;
-    font-size: 30px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    visibility: visible;
-    transform: translateY(-50%);
-    z-index: 100; /* Sopra al contenuto */
-    transition: background-color 0.3s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	padding: 15px;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	font-size: 30px;
+	visibility: hidden;
 }
-
-/* Posizionamento dei pulsanti */
-.prev {
-    left: 20px; /* Margine sinistro */
-}
-
 .next {
-    right: 20px; /* Margine destro */
+	right: 0;
+	border-radius: 3px 0 0 3px;
 }
-
-/* Effetti hover per i pulsanti */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-}
-
-/* Stile generale per la pagina */
 html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Rimuove le barre di scorrimento della finestra */
-    width: 100vw; /* Adatta alla larghezza dello schermo */
-    height: 100vh; /* Adatta all'altezza dello schermo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0; /* Colore di sfondo chiaro */
+	margin: 0;
+	overflow: hidden
 }
-
-/* Media query per schermi piccoli */
-@media (max-width: 768px) {
-    .prev, .next {
-        font-size: 20px; /* Riduce la dimensione del testo */
-        padding: 10px; /* Riduce la spaziatura */
-    }
-}
->>>>>>> Stashed changes
