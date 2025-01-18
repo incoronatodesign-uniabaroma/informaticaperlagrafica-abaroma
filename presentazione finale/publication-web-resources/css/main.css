@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 * Centrare e ingrandire il contenuto */.contentIframeClass {
 		width: 1024px;
 	/* Larghezza standard per visualizzazione */	height: 768px;
@@ -40,3 +41,75 @@
 iframe::-webkit-scrollbar {
 		display: none;
 	/* Nasconde per browser basati su WebKit */}
+=======
+/* Ottimizzazione della visualizzazione per tutti gli schermi */
+
+/* Stile per l'iframe del contenuto */
+.contentIframeClass {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    overflow: hidden; /* Rimuove barre di scorrimento */
+}
+
+/* Nascondere l'iframe dummy */
+.dummyIFrameClass {
+    display: none;
+}
+
+/* Stile per i pulsanti di navigazione */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    padding: 15px;
+    color: #000;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    visibility: visible;
+    transform: translateY(-50%);
+    z-index: 100; /* Sopra al contenuto */
+    transition: background-color 0.3s ease;
+}
+
+/* Posizionamento dei pulsanti */
+.prev {
+    left: 20px; /* Margine sinistro */
+}
+
+.next {
+    right: 20px; /* Margine destro */
+}
+
+/* Effetti hover per i pulsanti */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+/* Stile generale per la pagina */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Rimuove le barre di scorrimento della finestra */
+    width: 100vw; /* Adatta alla larghezza dello schermo */
+    height: 100vh; /* Adatta all'altezza dello schermo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Colore di sfondo chiaro */
+}
+
+/* Media query per schermi piccoli */
+@media (max-width: 768px) {
+    .prev, .next {
+        font-size: 20px; /* Riduce la dimensione del testo */
+        padding: 10px; /* Riduce la spaziatura */
+    }
+}
+>>>>>>> Stashed changes

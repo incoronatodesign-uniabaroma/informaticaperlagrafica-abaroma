@@ -1,4 +1,15 @@
+/* CSS Ottimizzato per layout centrato e responsivo (idGeneratedStyles.css) */
+
+/* Stile generale */
+body, div, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Gestione migliore dello spazio */
+}
+
+/* Testi e font */
 @font-face {
+<<<<<<< Updated upstream
 		font-family:"Adlery Pro";	font-style:normal;	font-weight:normal;	src : url("../../font/AdleryPro-Regular.otf");}
 
 @font-face {
@@ -456,3 +467,78 @@ div._idGenObjectAttribute-18 {
 
 div._idGenObjectStyle-Disabled {
 		background-color:transparent;	border-width:0px;}
+=======
+    font-family: "Adlery Pro";
+    src: url("../font/AdleryPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "Arial";
+    src: url("../font/ArialMT.ttf");
+}
+
+@font-face {
+    font-family: "Chiller";
+    src: url("../font/Chiller-Regular.TTF");
+}
+
+@font-face {
+    font-family: "MS Reference Sans Serif";
+    src: url("../font/MSReferenceSansSerif.TTF");
+}
+
+@font-face {
+    font-family: "Minion Pro";
+    src: url("../font/MinionPro-Regular.otf");
+}
+
+/* Classi di layout generale */
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Copertura completa della finestra */
+}
+
+/* Pulsanti di navigazione */
+.nav-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    border: 1px solid #000;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .nav-button {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+>>>>>>> Stashed changes
